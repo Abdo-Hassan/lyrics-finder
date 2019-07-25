@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Index from './components/layout/Index';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>test</h1>
-    </div>
+    <Router>
+      <Fragment>
+        <Navbar />
+        <div className='container'>
+          <Switch>
+            <Route exact path='/' component={Index} />
+          </Switch>
+        </div>
+      </Fragment>
+    </Router>
   );
 }
 

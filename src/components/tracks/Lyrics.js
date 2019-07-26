@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Spinner from '../layout/Spinner';
-import Moment from 'react-moment';
 
 class Lyrics extends Component {
   state = {
@@ -54,7 +53,9 @@ class Lyrics extends Component {
               <span className='text-secondary'>{track.artist_name}</span>
             </h5>
             <div className='card-body'>
-              <p className='card-text'>{lyrics.lyrics_body}</p>
+              <p className='card-text' style={{ whiteSpace: 'pre' }}>
+                {lyrics.lyrics_body}
+              </p>
             </div>
           </div>
 
@@ -65,10 +66,6 @@ class Lyrics extends Component {
             <li className='list-group-item'>
               <strong>Explicit Words</strong>:{' '}
               {track.explicit === 0 ? 'No' : 'Yes'}
-            </li>
-            <li className='list-group-item'>
-              <strong>Release Date</strong>:{' '}
-              <Moment format='MM/DD/YYYY'>{track.first_release_date}</Moment>
             </li>
           </ul>
         </React.Fragment>

@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Fragment>
           <Navbar />
-          <div className='container'>
+          <div className='container' style={{ marginBottom: 25 }}>
             <Switch>
               <Route exact path='/' component={Index} />
               <Route exact path='/lyrics/track/:id' component={Lyrics} />

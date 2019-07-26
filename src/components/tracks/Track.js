@@ -8,13 +8,13 @@ const Track = props => {
         <div className='card-body'>
           <h5>{track.artist_name}</h5>
           <p className='card-text'>
-            <strong>
+            <strong className='mr-2'>
               <i className='fas fa-play' style={{ marginRight: 5 }} />
               Track
             </strong>
             <span>{track.track_name}</span>
             <br />
-            <strong>
+            <strong className='mr-2'>
               <i className='fas fa-compact-disc' style={{ marginRight: 5 }} />
               Album
             </strong>

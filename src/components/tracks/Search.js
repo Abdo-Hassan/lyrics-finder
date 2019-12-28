@@ -13,11 +13,7 @@ class Search extends Component {
     e.preventDefault();
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track=${
-          this.state.trackTitle
-        }&page_size=10&page=1&s_track_rating=desc&apikey=${
-          process.env.REACT_APP_MM_KEY
-        }`
+        `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track=${this.state.trackTitle}&page_size=10&page=1&s_track_rating=desc&apikey=${process.env.REACT_APP_MM_KEY}`
       )
       .then(res => {
         dispatch({
@@ -34,7 +30,7 @@ class Search extends Component {
           const { dispatch } = value;
           return (
             <div className='card card-body mb-4 p-4'>
-              <h1 className='display-4 text-center'>
+              <h1 className='display-4 text-center title-header'>
                 <i className='fas fa-music' /> Search For A Song
               </h1>
               <p className='lead text-center'>Get the lyrics for any song</p>
@@ -49,7 +45,7 @@ class Search extends Component {
                     onChange={this.onChange}
                   />
                 </div>
-                <button className='btn btn-block btn-primary btn-lg mb-6'>
+                <button className='btn btn-block btn-info btn-lg mb-6'>
                   Get Track Lyrics
                 </button>
               </form>

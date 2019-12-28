@@ -1,0 +1,12 @@
+.lyrics-content {
+  white-space: pre;
+}
+
+@media only screen and (max-width: 600px) {
+  .title-header {
+    font-size: 30px;
+  }
+  .lyrics-content {
+    white-space: normal;
+  }
+}

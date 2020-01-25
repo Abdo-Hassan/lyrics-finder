@@ -4,9 +4,12 @@
 
 @media only screen and (max-width: 600px) {
   .title-header {
-    font-size: 30px;
+    font-size: 25px;
   }
   .lyrics-content {
     white-space: normal;
+  }
+  .subtitle-header {
+    font-size: 17px;
   }
 }
